@@ -1,0 +1,39 @@
+{
+    "schema_version": 1,
+    "quilt_loader": {
+        "group": "${group}",
+        "id": "twilightforest",
+        "version": "${version}",
+        "metadata": {
+            "name": "twilightforest",
+            "description": "The Twilight Forest mod made to work on QML!",
+            "contributors": {
+                "autumn": "Owner"
+            },
+            "contact": {},
+            "icon": "assets/example_mod/icon.png",
+            "license": "MIT"
+        },
+        "intermediate_mappings": "net.fabricmc:intermediary",
+        "entrypoints": {
+            "init": "net.quiltmc.users.autumn.twilightforest.Twilightforest",
+						"client_init": "net.quiltmc.users.autumn.twilightforest.TwilightforestClient",
+						"fabric-datagen": "net.quiltmc.users.autumn.twilightforest.TwilightforestdataGenerator"
+        },
+        "depends": [
+            {
+                "id": "quilt_loader",
+                "versions": ">=0.19.1"
+            },
+            {
+                "id": "quilted_fabric_api",
+                "versions": ">=7.0.2"
+            },
+            {
+                "id": "minecraft",
+                "versions": ">=1.20"
+            }
+        ]
+    },
+    "mixin": "twilightforest.mixins.json"
+}
