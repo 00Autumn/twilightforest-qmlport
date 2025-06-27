@@ -1,0 +1,65 @@
+{
+  "item.twilightforst.naga_scale": "Naga Scale",
+  "item.twilightforst.liveroot": "Liveroot",
+  "item.twilightforst.raw_ironwood": "Raw Ironwood",
+  "item.twilightforst.ironwood_ingot": "Ironwood Ingot",
+  "item.twilightforst.steeleaf_ingot": "Steeleaf Ingot",
+  "item.twilightforst.armor_shard": "Armor Shard",
+  "item.twilightforst.armor_shard_cluster": "Armor Shard Cluster",
+  "item.twilightforst.knightmetal_ingot": "Knightmetal Ingot",
+  "item.twilightforst.fiery_blood": "Fiery Blood",
+  "item.twilightforst.fiery_tears": "Fiery Tears",
+  "item.twilightforst.fiery_ingot": "Fiery Ingot",
+  "item.twilightforst.arctic_fur": "Arctic Fur",
+  "item.twilightforst.alpha_yeti_fur": "Alpha Yeti Fur",
+
+  "item.twilightforst.raven_feather": "Raven Feather",
+  "item.twilightforst.magic_map_focus": "Magic Map Focus",
+  "item.twilightforst.maze_map_focus": "Maze Map Focus",
+  "item.twilightforst.charm_of_life_i": "Charm of Life I",
+  "item.twilightforst.charm_of_life_ii": "Charm of Life II",
+  "item.twilightforst.charm_of_keeping_i": "Charm of Keeping I",
+  "item.twilightforst.charm_of_keeping_ii": "Charm of Keeping II",
+  "item.twilightforst.charm_of_keeping_iii": "Charm of Keeping III",
+  "item.twilightforst.borer_essence": "Borer Essence",
+  "item.twilightforst.carminite": "Carminite",
+  "item.twilightforst.emperors_cloth": "Emperor's Cloth",
+  "item.twilightforst.crown_splinter": "Crown Splinter",
+
+  "item.twilightforst.tower_key": "Tower Key",
+
+  "block.twilightforest.root_block": "Root Block",
+  "block.twilightforest.liveroot_block": "Liveroot Block",
+
+  "block.twilightforest.mazestone": "Mazestone",
+  "block.twilightforest.mazestone_brick": "Mazestone Brick",
+  "block.twilightforest.cut_mazestone": "Cut Mazestone",
+  "block.twilightforest.decorative_mazestone": "Decorative Mazestone",
+  "block.twilightforest.cracked_mazestone": "Crackled Mazestone",
+  "block.twilightforest.mossy_mazestone": "Mossy Mazestone",
+  "block.twilightforest.mazestone_mosaic": "Mazestone Mosaic",
+  "block.twilightforest.maestone_border": "Mazestone Border",
+
+  "block.twilightforest.underbrick": "Underbrick",
+  "block.twilightforest.mossy_underbrick": "Mossy Underbrick",
+  "block.twilightforest.cracked_underbrick": "Cracked Underbrick",
+  "block.twilightforest.underbrick_floor": "Underbrick Floor",
+
+  "block.twilightforest.towerwood": "Towerwood",
+  "block.twilightforest.encased_towerwood": "Encased Towerwood",
+  "block.twilightforest.cracked_towerwood": "Cracked Towerwood",
+
+  "block.twilightforest.stronghold_shield": "Stronghold Shield",
+
+  "block.twilightforest.infested_towerwood": "Infested Towerwood",
+  "block.twilightforest.antibuilt_block": "Antibuilt Block",
+  "block.twilightforest.fake_gold": "Fake Gold",
+  "block.twilightforest.fake_diamond": "Fake Diamond",
+
+  "block.twilightforest.maze_slime_block": "Maze Slime Block",
+
+  "itemgroups.twilightfoirest.twilight_forest_items": "Twilight Forest: Items",
+  "itemgroups.twilightfoirest.twilight_forest_blocks": "Twilight Forest: Blocks",
+  "itemgroups.twilightfoirest.twilight_forest_equipment": "Twilight Forest: Equipment"
+
+}

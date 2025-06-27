@@ -1,5 +1,8 @@
 package net.quiltmc.users.autumn.twilightforest;
 
+import net.quiltmc.users.autumn.twilightforest.init.block.TFBlocks;
+import net.quiltmc.users.autumn.twilightforest.init.item.TFItemGroups;
+import net.quiltmc.users.autumn.twilightforest.init.item.TFItems;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 import org.slf4j.Logger;
@@ -11,6 +14,8 @@ public class Twilightforest implements ModInitializer {
 
     @Override
     public void onInitialize(ModContainer mod) {
-
+		TFItems.registerItems();
+		TFBlocks.registerBlocks();
+		TFItemGroups.registerItemGroups();
     }
 }
