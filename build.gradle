@@ -3,6 +3,11 @@ plugins {
 	alias libs.plugins.quilt.loom
 }
 
+// Task to delete all previously generated data
+tasks.register("cleanGenerated", Delete) {
+	delete 'src/generated/resources'
+}
+
 base {
 	archivesName = project.archives_base_name
 }
@@ -28,6 +33,28 @@ loom {
 			// If you shade (directly include classes, not JiJ) a dependency into your mod, include it here using one of these methods:
 			// dependency("com.example.shadowedmod:1.2.3")
 			// configuration("exampleShadedConfigurationName")
+		}
+	}
+}
+loom {
+	runs {
+		datagen {
+			name = "Data Generator"
+			environment "client"
+
+			mainClass.set("org.quiltmc.loader.impl.launch.knot.KnotClient")
+
+			vmArg "-Dfabric-api.datagen"
+			vmArg "-Dfabric-api.datagen.strict-validation"
+			vmArg "-Dfabric-api.datagen.modid=twilightforest"
+			vmArg "-Dfabric-api.datagen.output-dir=${file('src/generated/resources').absolutePath}"
+		}
+	}
+}
+sourceSets {
+	main {
+		resources {
+			srcDir 'src/generated/resources'  // Include datagen output here
 		}
 	}
 }

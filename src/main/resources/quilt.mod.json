@@ -18,7 +18,7 @@
         "entrypoints": {
             "init": "net.quiltmc.users.autumn.twilightforest.Twilightforest",
 						"client_init": "net.quiltmc.users.autumn.twilightforest.TwilightforestClient",
-						"fabric-datagen": "net.quiltmc.users.autumn.twilightforest.TwilightforestdataGenerator"
+						"fabric-datagen": "net.quiltmc.users.autumn.twilightforest.TwilightforestDataGenerator"
         },
         "depends": [
             {

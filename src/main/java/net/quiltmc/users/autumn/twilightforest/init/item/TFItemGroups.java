@@ -46,6 +46,16 @@ public class TFItemGroups {
 
 				entries.addItem(TFItems.TOWER_KEY);
 
+				entries.addItem(TFItems.RAW_VENISON);
+				entries.addItem(TFItems.COOKED_VENISON);
+				entries.addItem(TFItems.RAW_MEEF);
+				entries.addItem(TFItems.COOKED_MEEF);
+				entries.addItem(TFItems.MEEF_STROGANOFF);
+				entries.addItem(TFItems.HYDRA_CHOP);
+				entries.addItem(TFItems.TORCHBERRIES);
+				entries.addItem(TFItems.EXPERIMENT_115);
+				entries.addItem(TFItems.MAZE_WAFER);
+
 			})
 			.build());
 
@@ -57,8 +67,16 @@ public class TFItemGroups {
 				entries.addItem(TFBlocks.ROOT_BLOCK);
 				entries.addItem(TFBlocks.LIVEROOT_BLOCK);
 
+				entries.addItem(TFBlocks.IRONWOOD_BLOCK);
+				entries.addItem(TFBlocks.STEELEAF_BLOCK);
+				entries.addItem(TFBlocks.KNIGHTMETAL_BLOCK);
+				entries.addItem(TFBlocks.FIERY_METAL_BLOCK);
+				entries.addItem(TFBlocks.ARCTIC_FUR_BLOCK);
+
 				entries.addItem(TFBlocks.MAZESTONE);
 				entries.addItem(TFBlocks.MAZESTONE_BRICK);
+				entries.addItem(TFBlocks.MAZESTONE_LARGE_BRICK);
+				entries.addItem(TFBlocks.CHISELED_MAZESTONE);
 				entries.addItem(TFBlocks.CUT_MAZESTONE);
 				entries.addItem(TFBlocks.DECORATIVE_MAZESTONE);
 				entries.addItem(TFBlocks.CRACKED_MAZESTONE);
@@ -74,6 +92,9 @@ public class TFItemGroups {
 				entries.addItem(TFBlocks.TOWERWOOD);
 				entries.addItem(TFBlocks.ENCASED_TOWERWOOD);
 				entries.addItem(TFBlocks.CRACKED_TOWERWOOD);
+
+				entries.addItem(TFBlocks.HEDGE);
+				entries.addItem(TFBlocks.HEDGE_ROSE);
 
 				entries.addItem(TFBlocks.STRONGHOLD_SHIELD);
 
@@ -92,6 +113,7 @@ public class TFItemGroups {
 		FabricItemGroup.builder().icon(() -> new ItemStack(TFItems.CHARM_OF_KEEPING_III))
 			.name(Text.translatable("itemgroup.twilightforest.twilight_forest_equipment"))
 			.entries((displayParameters, entries) -> {
+				entries.addItem(TFItems.RABBIT_POCKET_WATCH);
 
 			})
 			.build());
