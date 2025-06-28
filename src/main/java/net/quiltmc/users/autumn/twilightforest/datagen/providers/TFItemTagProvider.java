@@ -29,7 +29,7 @@ public class TFItemTagProvider extends FabricTagProvider.ItemTagProvider {
 			.add(TFItems.COOKED_VENISON)
 			.add(TFItems.RAW_MEEF)
 			.add(TFItems.COOKED_MEEF)
-			.add(TFItems.HYDRA_CHOP);;
+			.add(TFItems.HYDRA_CHOP);
 
 		//getOrCreateTagBuilder(ItemTags.FREEZE_IMMUNE_WEARABLES);
 
@@ -54,6 +54,34 @@ public class TFItemTagProvider extends FabricTagProvider.ItemTagProvider {
 		getOrCreateTagBuilder(TFTags.items.REPAIRS_STEELEAF_TOOLS).addTag(TFTags.items.STEELEAF_INGOTS);
 		getOrCreateTagBuilder(TFTags.items.REPAIRS_KNIGHTMETAL_TOOLS).addTag(TFTags.items.KNIGHTMETAL_INGOTS);
 		getOrCreateTagBuilder(TFTags.items.REPAIRS_FIERY_TOOLS).addTag(TFTags.items.FIERY_INGOTS);
+
+		getOrCreateTagBuilder(ItemTags.SWORDS)
+			.add(TFItems.IRONWOOD_SWORD)
+			.add(TFItems.STEELEAF_SWORD)
+			.add(TFItems.KNIGHTMETAL_SWORD)
+			.add(TFItems.FIERY_SWORD);
+
+		getOrCreateTagBuilder(ItemTags.PICKAXES)
+			.add(TFItems.IRONWOOD_PICKAXE)
+			.add(TFItems.STEELEAF_PICKAXE)
+			.add(TFItems.KNIGHTMETAL_PICKAXE)
+			.add(TFItems.FIERY_PICKAXE)
+			.add(TFItems.MAZEBREAKER_PICKAXE);
+
+		getOrCreateTagBuilder(ItemTags.SHOVELS)
+			.add(TFItems.IRONWOOD_SHOVEL)
+			.add(TFItems.STEELEAF_SHOVEL);
+
+		getOrCreateTagBuilder(ItemTags.AXES)
+			.add(TFItems.IRONWOOD_AXE)
+			.add(TFItems.STEELEAF_AXE)
+			.add(TFItems.KNIGHTMETAL_AXE)
+			.add(TFItems.GOLD_MINOTAUR_AXE)
+			.add(TFItems.DIAMOND_MINOTAUR_AXE);
+
+		getOrCreateTagBuilder(ItemTags.HOES)
+			.add(TFItems.IRONWOOD_HOE)
+			.add(TFItems.STEELEAF_HOE);
 
 		//getOrCreateTagBuilder(TFTags.items.KEPT_ON_DEATH);
 	}

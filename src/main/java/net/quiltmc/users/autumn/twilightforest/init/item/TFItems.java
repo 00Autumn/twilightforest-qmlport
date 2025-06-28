@@ -2,9 +2,12 @@ package net.quiltmc.users.autumn.twilightforest.init.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.client.item.TooltipConfig;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ItemStack;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.AttributeModifiersComponent;
+import net.minecraft.entity.EquipmentSlotGroup;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -68,9 +71,116 @@ public class TFItems {
 
 	//EQUIPMENT & TRINKETS
 	public static final Item RABBIT_POCKET_WATCH = registerItem("rabbit_pocket_watch", new RabbitPocketWatchItem(new Item.Settings().maxCount(1).rarity(Rarity.UNCOMMON)));
+	public static final Item IRONWOOD_SWORD = registerItem("ironwood_sword",
+		new SwordItem(TFToolMaterials.IRONWOOD, createSwordSettings(4.0, -2.4)));
+	public static final Item IRONWOOD_PICKAXE = registerItem("ironwood_pickaxe",
+		new PickaxeItem(TFToolMaterials.IRONWOOD, createPickaxeSettings(2.0, -2.8)));
+	public static final Item IRONWOOD_SHOVEL = registerItem("ironwood_shovel",
+		new ShovelItem(TFToolMaterials.IRONWOOD, createShovelSettings(2.5, -3.0)));
+	public static final Item IRONWOOD_AXE = registerItem("ironwood_axe",
+		new AxeItem(TFToolMaterials.IRONWOOD, createAxeSettings(7.0, -3.1)));
+	public static final Item IRONWOOD_HOE = registerItem("ironwood_hoe",
+		new HoeItem(TFToolMaterials.IRONWOOD, createAxeSettings(-1.0, -1.0)));
+	public static final Item FIERY_SWORD = registerItem("fiery_sword",
+		new SwordItem(TFToolMaterials.FIERY, createSwordSettings(4.0, -2.4)));
+	public static final Item FIERY_PICKAXE = registerItem("fiery_pickaxe",
+		new PickaxeItem(TFToolMaterials.FIERY, createPickaxeSettings(2.0, -2.8)));
+	public static final Item STEELEAF_SWORD = registerItem("steeleaf_sword",
+		new SwordItem(TFToolMaterials.STEELEAF, createSwordSettings(4.0, -2.4)));
+	public static final Item STEELEAF_PICKAXE = registerItem("steeleaf_pickaxe",
+		new PickaxeItem(TFToolMaterials.STEELEAF, createPickaxeSettings(2.0, -2.8)));
+	public static final Item STEELEAF_SHOVEL = registerItem("steeleaf_shovel",
+		new ShovelItem(TFToolMaterials.STEELEAF, createShovelSettings(2.5, -3.0)));
+	public static final Item STEELEAF_AXE = registerItem("steeleaf_axe",
+		new AxeItem(TFToolMaterials.STEELEAF, createAxeSettings(7.0, -3.0)));
+	public static final Item STEELEAF_HOE = registerItem("steeleaf_hoe",
+		new HoeItem(TFToolMaterials.STEELEAF, createAxeSettings(-2.0, -0.5)));
+	public static final Item KNIGHTMETAL_SWORD = registerItem("knightmetal_sword",
+		new SwordItem(TFToolMaterials.KNIGHTMETAL, createSwordSettings(4.0, -2.4)));
+	public static final Item KNIGHTMETAL_PICKAXE = registerItem("knightmetal_pickaxe",
+		new PickaxeItem(TFToolMaterials.KNIGHTMETAL, createPickaxeSettings(2.0, -2.8)));
+	public static final Item KNIGHTMETAL_AXE = registerItem("knightmetal_axe",
+		new AxeItem(TFToolMaterials.KNIGHTMETAL, createAxeSettings(7.0, -3.0)));
+	public static final Item GOLD_MINOTAUR_AXE = registerItem("gold_minotaur_axe",
+		new AxeItem(ToolMaterials.GOLD, createAxeSettings(7.0, -2.8)));
+	public static final Item DIAMOND_MINOTAUR_AXE = registerItem("diamond_minotaur_axe",
+		new AxeItem(ToolMaterials.GOLD, createAxeSettings(7.0, -3.0)));
+	public static final Item MAZEBREAKER_PICKAXE = registerItem("mazebreaker_pickaxe",
+		new PickaxeItem(ToolMaterials.DIAMOND, createPickaxeSettings(2.0, -2.8)));
 
 	private static Item registerItem(String name, Item item) {
 		return Registry.register(Registries.ITEM, Identifier.of(Twilightforest.MOD_ID, name), item);
+	}
+
+	public static Item.Settings createSwordSettings(double attackDamage, double attackSpeed) {
+		return new Item.Settings().component(DataComponentTypes.ATTRIBUTE_MODIFIERS,
+			AttributeModifiersComponent.builder()
+				.add(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "sword_damage"),
+						attackDamage, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.add(EntityAttributes.GENERIC_ATTACK_SPEED,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "sword_speed"),
+						attackSpeed, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.build()
+		);
+	}
+	public static Item.Settings createPickaxeSettings(double attackDamage, double attackSpeed) {
+		return new Item.Settings().component(DataComponentTypes.ATTRIBUTE_MODIFIERS,
+			AttributeModifiersComponent.builder()
+				.add(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "pickaxe_damage"),
+						attackDamage, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.add(EntityAttributes.GENERIC_ATTACK_SPEED,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "pickaxe_speed"),
+						attackSpeed, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.build()
+		);
+	}
+	public static Item.Settings createShovelSettings(double attackDamage, double attackSpeed) {
+		return new Item.Settings().component(DataComponentTypes.ATTRIBUTE_MODIFIERS,
+			AttributeModifiersComponent.builder()
+				.add(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "shovel_damage"),
+						attackDamage, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.add(EntityAttributes.GENERIC_ATTACK_SPEED,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "shovel_speed"),
+						attackSpeed, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.build()
+		);
+	}
+	public static Item.Settings createAxeSettings(double attackDamage, double attackSpeed) {
+		return new Item.Settings().component(DataComponentTypes.ATTRIBUTE_MODIFIERS,
+			AttributeModifiersComponent.builder()
+				.add(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "axe_damage"),
+						attackDamage, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.add(EntityAttributes.GENERIC_ATTACK_SPEED,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "axe_speed"),
+						attackSpeed, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.build()
+		);
+	}
+	public static Item.Settings createHoeSettings(double attackDamage, double attackSpeed) {
+		return new Item.Settings().component(DataComponentTypes.ATTRIBUTE_MODIFIERS,
+			AttributeModifiersComponent.builder()
+				.add(EntityAttributes.GENERIC_ATTACK_DAMAGE,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "hoe_damage"),
+						attackDamage, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.add(EntityAttributes.GENERIC_ATTACK_SPEED,
+					new EntityAttributeModifier(Identifier.of("twilightforest", "hoe_speed"),
+						attackSpeed, EntityAttributeModifier.Operation.ADD_VALUE),
+					EquipmentSlotGroup.MAINHAND)
+				.build()
+		);
 	}
 
 	public static void registerItems() {
@@ -110,6 +220,24 @@ public class TFItems {
 			entries.addItem(TOWER_KEY);
 
 			entries.addItem(RABBIT_POCKET_WATCH);
+			entries.addItem(IRONWOOD_SWORD);
+			entries.addItem(IRONWOOD_PICKAXE);
+			entries.addItem(IRONWOOD_SHOVEL);
+			entries.addItem(IRONWOOD_AXE);
+			entries.addItem(IRONWOOD_HOE);
+			entries.addItem(STEELEAF_SWORD);
+			entries.addItem(STEELEAF_PICKAXE);
+			entries.addItem(STEELEAF_SHOVEL);
+			entries.addItem(STEELEAF_AXE);
+			entries.addItem(STEELEAF_HOE);
+			entries.addItem(KNIGHTMETAL_SWORD);
+			entries.addItem(KNIGHTMETAL_PICKAXE);
+			entries.addItem(KNIGHTMETAL_AXE);
+			entries.addItem(FIERY_SWORD);
+			entries.addItem(FIERY_PICKAXE);
+			entries.addItem(GOLD_MINOTAUR_AXE);
+			entries.addItem(DIAMOND_MINOTAUR_AXE);
+			entries.addItem(MAZEBREAKER_PICKAXE);
 
 		});
 

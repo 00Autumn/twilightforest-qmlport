@@ -11,11 +11,14 @@ public class TFTags {
 	public static class blocks {
 		public static TagKey<Block> MAZEBREAKER_TOOL_ACCELERATED = createTag("mazebreaker_tool_accelerated");
 
+		public static TagKey<Block> NEEDS_IRONWOOD_TOOL = createTag("needs_ironwood_tool");
+		public static TagKey<Block> NEEDS_STEELEAF_TOOL = createTag("needs_steeleaf_tool");
+		public static TagKey<Block> NEEDS_KNIGHTMETAL_TOOL = createTag("needs_knightmetal_tool");
+		public static TagKey<Block> NEEDS_FIERY_TOOL = createTag("needs_fiery_tool");
 		public static TagKey<Block> INCORRECT_FOR_IRONWOOD_TOOL = createTag("incorrect_for_ironwood_tool");
 		public static TagKey<Block> INCORRECT_FOR_STEELEAF_TOOL = createTag("incorrect_for_steeleaf_tool");
 		public static TagKey<Block> INCORRECT_FOR_KNIGHTMETAL_TOOL = createTag("incorrect_for_knightmetal_tool");
 		public static TagKey<Block> INCORRECT_FOR_FIERY_TOOL = createTag("incorrect_for_fiery_tool");
-
 
 		private static TagKey<Block> createTag(String name) {
 			return TagKey.of(RegistryKeys.BLOCK, Identifier.of(Twilightforest.MOD_ID, name));

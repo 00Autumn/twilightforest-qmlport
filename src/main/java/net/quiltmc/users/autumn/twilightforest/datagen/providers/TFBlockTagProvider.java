@@ -68,10 +68,10 @@ public class TFBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 			.add(TFBlocks.MAZESTONE_MOSAIC)
 			.add(TFBlocks.MAZESTONE_BORDER);
 
-		//getOrCreateTagBuilder(TFTags.blocks.INCORRECT_FOR_IRONWOOD_TOOL).addTag(BlockTags.INCORRECT_FOR_IRON_TOOL);
-		//getOrCreateTagBuilder(TFTags.blocks.INCORRECT_FOR_STEELEAF_TOOL).addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
-		//getOrCreateTagBuilder(TFTags.blocks.INCORRECT_FOR_KNIGHTMETAL_TOOL).addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL);
-		//getOrCreateTagBuilder(TFTags.blocks.INCORRECT_FOR_FIERY_TOOL).addTag(BlockTags.INCORRECT_FOR_NETHERITE_TOOL);
+		getOrCreateTagBuilder(TFTags.blocks.NEEDS_IRONWOOD_TOOL).addTag(BlockTags.NEEDS_IRON_TOOL);
+		getOrCreateTagBuilder(TFTags.blocks.NEEDS_STEELEAF_TOOL).addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+		getOrCreateTagBuilder(TFTags.blocks.NEEDS_KNIGHTMETAL_TOOL).addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+		getOrCreateTagBuilder(TFTags.blocks.NEEDS_FIERY_TOOL).addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 
 		getOrCreateTagBuilder(TFTags.blocks.MAZEBREAKER_TOOL_ACCELERATED)
 			.add(TFBlocks.MAZESTONE)

@@ -114,6 +114,24 @@ public class TFItemGroups {
 			.name(Text.translatable("itemgroup.twilightforest.twilight_forest_equipment"))
 			.entries((displayParameters, entries) -> {
 				entries.addItem(TFItems.RABBIT_POCKET_WATCH);
+				entries.addItem(TFItems.IRONWOOD_SWORD);
+				entries.addItem(TFItems.IRONWOOD_PICKAXE);
+				entries.addItem(TFItems.IRONWOOD_SHOVEL);
+				entries.addItem(TFItems.IRONWOOD_AXE);
+				entries.addItem(TFItems.IRONWOOD_HOE);
+				entries.addItem(TFItems.STEELEAF_SWORD);
+				entries.addItem(TFItems.STEELEAF_PICKAXE);
+				entries.addItem(TFItems.STEELEAF_SHOVEL);
+				entries.addItem(TFItems.STEELEAF_AXE);
+				entries.addItem(TFItems.STEELEAF_HOE);
+				entries.addItem(TFItems.KNIGHTMETAL_SWORD);
+				entries.addItem(TFItems.KNIGHTMETAL_PICKAXE);
+				entries.addItem(TFItems.KNIGHTMETAL_AXE);
+				entries.addItem(TFItems.FIERY_SWORD);
+				entries.addItem(TFItems.FIERY_PICKAXE);
+				entries.addItem(TFItems.GOLD_MINOTAUR_AXE);
+				entries.addItem(TFItems.DIAMOND_MINOTAUR_AXE);
+				entries.addItem(TFItems.MAZEBREAKER_PICKAXE);
 
 			})
 			.build());

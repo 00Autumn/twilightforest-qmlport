@@ -106,6 +106,24 @@ public class TFModelProvider extends FabricModelProvider {
 		itemModelGenerator.register(TFItems.MAZE_WAFER, Models.SINGLE_LAYER_ITEM);
 
 		itemModelGenerator.register(TFItems.RABBIT_POCKET_WATCH, Models.SINGLE_LAYER_ITEM);
+		itemModelGenerator.register(TFItems.IRONWOOD_SWORD, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.IRONWOOD_PICKAXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.IRONWOOD_SHOVEL, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.IRONWOOD_AXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.IRONWOOD_HOE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.STEELEAF_SWORD, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.STEELEAF_PICKAXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.STEELEAF_SHOVEL, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.STEELEAF_AXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.STEELEAF_HOE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.KNIGHTMETAL_SWORD, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.KNIGHTMETAL_PICKAXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.KNIGHTMETAL_AXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.FIERY_SWORD, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.FIERY_PICKAXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.MAZEBREAKER_PICKAXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.GOLD_MINOTAUR_AXE, Models.HANDHELD);
+		itemModelGenerator.register(TFItems.DIAMOND_MINOTAUR_AXE, Models.HANDHELD);
 
 	}
 }
