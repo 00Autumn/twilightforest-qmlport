@@ -9,6 +9,7 @@ import net.minecraft.advancement.criterion.CriterionConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterionTrigger;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonFactory;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonFactory;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
@@ -114,6 +115,17 @@ public class TFRecipeProvider extends FabricRecipeProvider {
 			.ingredient(TFItems.CHARM_OF_KEEPING_II)
 			.ingredient(TFItems.CHARM_OF_KEEPING_II)
 			.criterion("has_item", InventoryChangedCriterionTrigger.Conditions.create(TFItems.CHARM_OF_KEEPING_I, TFItems.CHARM_OF_KEEPING_II, TFItems.CHARM_OF_KEEPING_III))
+			.offerTo(exporter);
+
+		//RABBIT POCKET WATCH
+		ShapedRecipeJsonFactory.create(RecipeCategory.TOOLS, TFItems.RABBIT_POCKET_WATCH, 1)
+			.pattern(" GC")
+			.pattern("GRG")
+			.pattern(" G ")
+			.ingredient('G', Items.GOLD_INGOT)
+			.ingredient('R', Items.RABBIT_FOOT)
+			.ingredient('C', Items.CHAIN)
+			.criterion("has_item", InventoryChangedCriterionTrigger.Conditions.create(Items.RABBIT_FOOT))
 			.offerTo(exporter);
 
 	}

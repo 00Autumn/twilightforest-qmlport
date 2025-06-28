@@ -1,5 +1,6 @@
 package net.quiltmc.users.autumn.twilightforest;
 
+import net.quiltmc.users.autumn.twilightforest.component.TFDataComponentTypes;
 import net.quiltmc.users.autumn.twilightforest.init.block.TFBlocks;
 import net.quiltmc.users.autumn.twilightforest.init.item.TFFoodComponents;
 import net.quiltmc.users.autumn.twilightforest.init.item.TFItemGroups;
@@ -19,5 +20,7 @@ public class Twilightforest implements ModInitializer {
 		TFBlocks.registerBlocks();
 		TFItemGroups.registerItemGroups();
 		TFFoodComponents.registerFoodComponents();
+		TFDataComponentTypes.registerDataComponentTypes();
+
     }
 }
